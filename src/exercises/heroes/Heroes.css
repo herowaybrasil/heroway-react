@@ -1,0 +1,21 @@
+.heroes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroes-container > .card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin: 20px 0;
+}
+
+.heroes-container > .card > .hero {
+  display: flex;
+  margin: 20px;
+}
+
+.heroes-container > .card > .hero > img {
+  width: 200px;
+}
