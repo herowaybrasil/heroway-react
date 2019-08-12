@@ -20,7 +20,11 @@ class HeroPowerStats extends React.Component<IProps> {
 
   render() {
     if (this.state.stats.length === 0) {
-      return <button onClick={this.getHeroPowerStats}>Get Status</button>;
+      return (
+        <div className="hero-button">
+          <button onClick={this.getHeroPowerStats}>Get Status</button>
+        </div>
+      );
     }
 
     return (

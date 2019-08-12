@@ -1,10 +1,45 @@
 .hero-power-stats-component {
   display: flex;
+  justify-content: center;
+  width: 100%;
   flex-wrap: wrap;
-  flex-grow: 1;
 }
 
 .hero-power-stats-component > .attributes {
   flex-grow: 1;
   flex-basis: 33%;
+  color: #35415a;
+  
+}
+
+.hero-power-stats-component > .attributes h4 {
+  text-transform: uppercase;
+}
+
+.hero-button {
+  display: flex;
+  flex: 4;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-button button {
+  position: relative;
+  bottom: 0;
+  background-color: #282c34;
+  color: #fff;
+  border: 0;
+  padding: 50px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 900;
+  box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button button:hover {
+  background-color: #35415a;
+  box-shadow: 1px 10px 8px rgba(0, 0, 0, 0.5);
+  bottom: 5px;
 }

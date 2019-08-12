@@ -1,7 +1,10 @@
 .heroes-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 .heroes-container > .card {
@@ -9,6 +12,15 @@
   flex-direction: column;
   flex-basis: 100%;
   margin: 20px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0 20px 20px 20px;
+}
+
+.heroes-container > .card > h3 {
+  text-transform: uppercase;
+  color: #282c34;
+  font-weight: 900;
 }
 
 .heroes-container > .card > .hero {
@@ -17,5 +29,16 @@
 }
 
 .heroes-container > .card > .hero > img {
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  bottom: 0;
+}
+
+.heroes-container > .card > .hero > img:hover {
+  box-shadow: 1px 10px 8px rgba(0, 0, 0, 0.5);
+  bottom: 5px;
 }
