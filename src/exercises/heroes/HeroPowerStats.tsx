@@ -30,7 +30,7 @@ class HeroPowerStats extends React.Component<IProps> {
     return (
       <div className="hero-power-stats-component">
         {Object.keys(this.state.stats).map((key: any) => (
-          <div className="attributes">
+          <div key={key} className="attributes">
             <h4>{key}</h4>
             <div>{this.state.stats[key]}</div>
           </div>

@@ -21,7 +21,7 @@ class Heroes extends React.Component {
       <div className="heroes-container">
         {this.state.heroes.map((hero: any) => {
           return (
-            <div className="card">
+            <div key={hero.id} className="card">
               <h3>{hero.name}</h3>
               <div className="hero">
                 <img src={hero.images.sm} />

@@ -14,11 +14,11 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <HelloWorld
+        <HelloWorld
           name="Gabriel"
           company={"Heroway"}
           since={2018}
-        /> */}
+        />
 
         {/* <ToggleLike defaultLiked={true} /> */}
 
@@ -36,7 +36,7 @@ const App: React.FC = () => {
 
         {/* <FreeNudes /> */}
 
-        <Heroes />
+        {/* <Heroes /> */}
       </header>
     </div>
   );

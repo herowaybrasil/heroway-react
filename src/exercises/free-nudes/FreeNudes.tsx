@@ -1,5 +1,5 @@
 import React from "react";
-import FreeNudesImage from "./FreeNudes.png";
+import FreeNudesImage from "./free-nudes.png";
 
 import "./FreeNudes.css";
 
