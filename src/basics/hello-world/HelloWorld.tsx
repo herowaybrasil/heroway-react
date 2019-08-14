@@ -8,8 +8,8 @@ interface IProps {
 const HelloWorld: React.FC<IProps> = props => {
   return (
     <>
-      <div>Olá, meu nome é {props.name}</div>
-      <div>Somos a {props.company}!</div>
+      <div>Olá, meu nome é {props.name}.</div>
+      <div>Somos a <strong>{props.company}</strong>!</div>
       {props.since && (
         <div>Estamos ajudando pessoas a conquistarem seu primeiro emprego desde {props.since}!</div>
       )}

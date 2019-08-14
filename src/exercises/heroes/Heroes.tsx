@@ -3,17 +3,40 @@ import "./Heroes.css";
 import React from "react";
 import HeroPowerStats from "./HeroPowerStats";
 
-class Heroes extends React.Component {
+interface IHero {
+  id: number;
+  name: string;
+  imgs: Array<{ sm: string }>
+}
+
+interface IState {
+  heroes: IHero[];
+}
+
+class Heroes extends React.Component<any, IState> {
   state = {
     heroes: []
   };
 
+  getFirstTenHeroes = (heroes: IHero[]) => {
+    return heroes.slice(0, 10);
+  }
+
+  getFilteredHeroes = (heroes: IHero[]) => {
+    const heroesNames = ['Spider-Man', 'Black Widow', 'Iron Man', 'Scarlet Witch', 'Thor', 'Gamora', 'Captain America'];
+    return heroes.filter((hero) => heroesNames.includes(hero.name));
+  }
+
   async componentDidMount() {
     const response = await fetch("https://akabab.github.io/superhero-api/api/all.json");
-    const heroes = await response.json();
-    const firstTenHeroes = heroes.slice(0, 10);
+    const allHeroes = await response.json();
 
-    this.setState({ heroes: firstTenHeroes });
+    // const firstTenHeroes = this.getFirstTenHeroes(allHeroes);
+    // this.setState({ heroes: firstTenHeroes });
+
+    const filteredHeroes = this.getFilteredHeroes(allHeroes);
+    this.setState({ heroes: filteredHeroes });
+
   }
 
   render() {
