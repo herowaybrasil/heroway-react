@@ -18,15 +18,6 @@ class Heroes extends React.Component<any, IState> {
     heroes: []
   };
 
-  getFirstTenHeroes = (heroes: IHero[]) => {
-    return heroes.slice(0, 10);
-  }
-
-  getFilteredHeroes = (heroes: IHero[]) => {
-    const heroesNames = ['Spider-Man', 'Black Widow', 'Iron Man', 'Scarlet Witch', 'Thor', 'Gamora', 'Captain America'];
-    return heroes.filter((hero) => heroesNames.includes(hero.name));
-  }
-
   async componentDidMount() {
     const response = await fetch("https://akabab.github.io/superhero-api/api/all.json");
     const allHeroes = await response.json();
@@ -36,7 +27,15 @@ class Heroes extends React.Component<any, IState> {
 
     const filteredHeroes = this.getFilteredHeroes(allHeroes);
     this.setState({ heroes: filteredHeroes });
+  }
 
+  getFirstTenHeroes = (heroes: IHero[]) => {
+    return heroes.slice(0, 10);
+  }
+
+  getFilteredHeroes = (heroes: IHero[]) => {
+    const heroesNames = ['Spider-Man', 'Black Widow', 'Iron Man', 'Scarlet Witch', 'Thor', 'Gamora', 'Captain America'];
+    return heroes.filter((hero) => heroesNames.includes(hero.name));
   }
 
   render() {
