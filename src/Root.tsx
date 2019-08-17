@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import * as ReactRedux from 'react-redux';
 
 import App from './App';

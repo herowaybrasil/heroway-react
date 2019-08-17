@@ -7,7 +7,7 @@ const INITIAL_STATE: any = {
 }
 
 // REDUCER
-export default function todosReducer(state = INITIAL_STATE, action: any) {
+export default function todosReducer(state = INITIAL_STATE, action: any) { // Importar
   switch(action.type) {
     case 'TOGGLE_TODO':
       return {

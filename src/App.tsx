@@ -11,6 +11,9 @@ import Heroes from "./components/withoutRedux/heroes/Heroes";
 import FreeNudes from "./components/withoutRedux/free-nudes/FreeNudes";
 
 import TodoListWithRedux from './components/withRedux/todo-list/TodoList';
+import Main from "./components/withoutRedux/children/Children";
+
+import CounterWithRedux from './components/withRedux/counter/Counter';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +24,8 @@ const App: React.FC = () => {
           company={"Heroway"}
           since={2018}
         /> */}
+
+        {/* <Main /> */}
 
         {/* <ToggleLike defaultLiked={true} /> */}
 
@@ -33,6 +38,7 @@ const App: React.FC = () => {
         /> */}
 
         {/* <Counter defaultValue={10} /> */}
+        {/* <CounterWithRedux /> */}
 
         {/* <TodoList /> */}
         <TodoListWithRedux />
