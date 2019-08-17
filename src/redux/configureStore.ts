@@ -1,14 +1,8 @@
 import * as Redux from 'redux';
 import * as ReduxDevtools from 'redux-devtools-extension';
 
-import todosReducer from './reducers/todos';
-import counterReducer from './reducers/counter';
-
 // Gera nosso state através de nossos reducers
-const state = Redux.combineReducers({
-  todosReducer: todosReducer, // pode ser potato: todosReducer " Pode "
-  counterReducer: counterReducer,
-});
+const state = Redux.combineReducers({});
 
 export type IAppState = ReturnType<typeof state>;
 

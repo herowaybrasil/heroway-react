@@ -10,20 +10,19 @@ import TodoList from "./components/withoutRedux/todo-list/TodoList";
 import Heroes from "./components/withoutRedux/heroes/Heroes";
 import FreeNudes from "./components/withoutRedux/free-nudes/FreeNudes";
 
-import TodoListWithRedux from './components/withRedux/todo-list/TodoList';
 import Main from "./components/withoutRedux/children/Children";
 
-import CounterWithRedux from './components/withRedux/counter/Counter';
+// import CounterWithRedux from './components/withRedux/counter/Counter';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <HelloWorld
+        <HelloWorld
           name="Gabriel"
           company={"Heroway"}
           since={2018}
-        /> */}
+        />
 
         {/* <Main /> */}
 
@@ -41,7 +40,6 @@ const App: React.FC = () => {
         {/* <CounterWithRedux /> */}
 
         {/* <TodoList /> */}
-        <TodoListWithRedux />
 
         {/* <FreeNudes /> */}
 
