@@ -15,15 +15,19 @@ import Main from "./components/withoutRedux/children/Children";
 
 import CounterWithRedux from './components/withRedux/counter/Counter';
 
+import HeroesWithRedux from './components/withRedux/heroes/Heroes';
+
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <HelloWorld
+        {/* <HelloWorld
           name="Gabriel"
           company={"Heroway"}
           since={2018}
-        />
+        /> */}
+
+        {/* <Heroes2 /> */}
 
         {/* <Main /> */}
 
@@ -45,7 +49,8 @@ const App: React.FC = () => {
 
         {/* <FreeNudes /> */}
 
-        {/* <Heroes /> */}
+        {/* <Heroes />   */}
+        <HeroesWithRedux />  
       </header>
     </div>
   );
