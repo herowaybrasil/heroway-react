@@ -16,9 +16,9 @@ interface IProps {
 const Counter = (props: IProps) => {
     return (
         <div>
-           < button onClick={props.dispatchIncrement}>+</button>
-           < span>{props.potato}</span>
-           < button onClick={props.dispatchDecrement}>-</button>
+           <button onClick={props.dispatchIncrement}>+</button>
+           <span>{props.potato}</span>
+           <button onClick={props.dispatchDecrement}>-</button>
         </div>
     )
 }

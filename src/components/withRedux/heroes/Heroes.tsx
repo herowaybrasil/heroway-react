@@ -17,7 +17,7 @@ class Heroes extends React.Component<any, any> {
       <ul>
         {this.props.heroesReducer.heroes.map((hero: any) => {
           return (
-            <li>{hero.name}</li>
+            <li key={hero.id}>{hero.name}</li>
           )
         })}
       </ul>

@@ -1,7 +1,7 @@
  import React from 'react';
 import * as ReactRedux from 'react-redux';
 
-import App from './App';
+import App from './components/App';
 import store from './redux/configureStore';
 
 // Configura nossa store para ser utilizada pelo Redux

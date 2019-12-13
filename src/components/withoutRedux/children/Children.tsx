@@ -3,35 +3,28 @@ import React from 'react';
 interface IProps {
   children: React.ReactNode;
 }
-const Parent = (props: IProps) => {
+const Outer = (props: IProps) => {
   return (
     <div>
-      Componente Pai!
+      Outer Component!
       {props.children}
     </div>
   )
 }
 
 
+const Inner = () => {
+  return (
+    <h1>Inner Component!</h1>
+  )
+};
+
 const Children = () => {
   return (
-    <h1>Componente Filho!</h1>
-  )
-};
-
-const Children2 = () => {
-  return (
-    <h1>Componente Filho 2!</h1>
-  )
-};
-
-const Main = () => {
-  return (
-    <Parent>
-      <Children />
-      <Children2 />
-    </Parent>
+    <Outer>
+      <Inner />
+    </Outer>
   )
 }
 
-export default Main;
+export default Children;
